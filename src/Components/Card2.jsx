@@ -6,7 +6,7 @@ import Base from "./Base";
 
 import short from "../assets/short-strip.png";
 import long from "../assets/large-strip.png";
-import star from "../assets/Star.png";
+import star from "../assets/star.png";
 const Card2 = () => {
   const tl = gsap.timeline();
   const keyDrop = useRef();
