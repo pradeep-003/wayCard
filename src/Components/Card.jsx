@@ -10,7 +10,7 @@ const Card = () => {
   useGSAP(
     () => {
       gsap.to(".scroll-bg", {
-        x: "-100%", // move full width
+        x: "100%", // move full width
         repeat: -1, // infinite
         duration: 4, // speed (lower = faster)
         ease: "linear", // smooth continuous
@@ -26,8 +26,8 @@ const Card = () => {
     <>
       <div ref={cardsLR} className="h-screen w-full overflow-hidden relative">
         <div className=" scroll-bg flex relative  h-[64vh]">
-          <div className="absolute left-[0vw]  h-full w-[100%] bg-[url('./assets/sam.png')] bg-contain bg-no-repeat bg-center"></div>
-          <div className=" absolute left-[calc(100vw-16px)] w-[100%] h-full bg-[url('./assets/sam.png')] bg-contain bg-no-repeat bg-center"></div>
+          <div className="absolute bg-yellow-500 left-[0vw]  h-full w-[100%] bg-[url('./assets/sam.png')] bg-contain bg-no-repeat bg-center"></div>
+          <div className=" absolute bg-red-500 left-[calc(-100vw+16px)] w-[100%] h-full bg-[url('./assets/sam.png')] bg-contain bg-no-repeat bg-center"></div>
         </div>
         <div className="text absolute top-[65vh]">heloo</div>
       </div>
