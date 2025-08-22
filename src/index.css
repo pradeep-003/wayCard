@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+/* Importing custom fonts */
+.grotesk-font {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.key {
+  width: 380px;
+  -webkit-mask-image: url("./assets/key.png"); /* black-white silhouette */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("./assets/key.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  background: url("./assets/key.png") no-repeat center/contain; /* original key */
+}
+
+.card-masking {
+  width: 480px;
+  -webkit-mask-image: url("./assets/id.png"); /* black-white silhouette */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("./assets/id.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  background: url("./assets/id.png") no-repeat center/contain; /* original key */
+}
