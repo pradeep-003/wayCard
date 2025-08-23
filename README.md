@@ -149,4 +149,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Made by [Pradeep](https://github.com/pradeeep-003)
+Made by [Pradeep](https://github.com/pradeep-003)
