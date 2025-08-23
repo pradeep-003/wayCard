@@ -82,7 +82,7 @@ const Card = () => {
       >
         <div className=" scroll-bg flex relative  h-[64vh] ">
           <div className="  absolute left-[0vw]  h-full w-[100%] bg-[url('/assets/back-cards.png')]  xl:bg-[url('/assets/back-cards.png')]  bg-contain bg-no-repeat bg-center "></div>
-          <div className=" absolute left-[calc(-100vw)] w-[100%] bg-[url('/assets/back-cards.png')] h-full xl:bg-[url('./assets/back-cards.png')] bg-contain bg-no-repeat bg-center"></div>
+          <div className=" absolute left-[calc(-100vw)] w-[100%] bg-[url('/assets/back-cards.png')] h-full xl:bg-[url('/assets/back-cards.png')] bg-contain bg-no-repeat bg-center"></div>
         </div>
 
         <div ref={tofro} className="absolute top-[2vh]  w-[100%] h-[64vh] ">
