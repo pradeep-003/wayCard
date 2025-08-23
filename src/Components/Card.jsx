@@ -86,7 +86,7 @@ const Card = () => {
         </div>
 
         <div ref={tofro} className="absolute top-[2vh]  w-[100%] h-[64vh] ">
-          <div className="pendulum card-masking w-[60%] h-full z-9  bg-[url('./assets/id.png')] bg-contain bg-no-repeat bg-center absolute pl-20 pt-15 xl:pl-15 xl:pt-10 top-[4vh] transform xl:translate-x-[105%]  ">
+          <div className="pendulum card-masking w-[60%] h-full  bg-[url('./assets/id.png')] bg-contain bg-no-repeat bg-center absolute pl-20 pt-15 xl:pl-15 xl:pt-10 top-[4vh] transform xl:translate-x-[105%]  ">
             <img
               src="/assets/short-strip.png"
               alt=""
