@@ -196,13 +196,13 @@ const Card2 = () => {
           />
         </div>
 
-        <div className="  key3 falling absolute rotate-160 left-[90%] top-[-10%] bg-[0.3] transform  h-full w-[12%] xl:w-[6%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
-        <div className=" key4 falling absolute rotate-240   left-[70%] top-[-68%] transform h-full w-[18%] xl:w-[14%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
+        <div className="  key3 falling absolute rotate-160 left-[90%] top-[-10%] bg-[0.3] transform  h-full w-[12%] xl:w-[6%] bg-[url('/assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
+        <div className=" key4 falling absolute rotate-240   left-[70%] top-[-68%] transform h-full w-[18%] xl:w-[14%] bg-[url('/assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
 
-        <div className="  falling absolute rotate-80  left-[4%] top-[-90%]  transform  h-full w-[15%] xl:w-[12%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
+        <div className="  falling absolute rotate-80  left-[4%] top-[-90%]  transform  h-full w-[15%] xl:w-[12%] bg-[url('/assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
 
-        <div className="  falling absolute rotate-160 left-[90%] top-[-110%]  bg-[0.3] transform  h-full w-[12%] xl:w-[6%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
-        <div className="  falling absolute rotate-240 left-[70%] top-[-168%] transform h-full w-[18%] xl:w-[14%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
+        <div className="  falling absolute rotate-160 left-[90%] top-[-110%]  bg-[0.3] transform  h-full w-[12%] xl:w-[6%] bg-[url('/assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
+        <div className="  falling absolute rotate-240 left-[70%] top-[-168%] transform h-full w-[18%] xl:w-[14%] bg-[url('/assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
         <Base
           title={"Trusted Keys"}
           content={

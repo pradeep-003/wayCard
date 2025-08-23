@@ -81,12 +81,12 @@ const Card = () => {
         className="h-screen w-full overflow-hidden relative pt-3 "
       >
         <div className=" scroll-bg flex relative  h-[64vh] ">
-          <div className="  absolute left-[0vw]  h-full w-[100%] bg-[url('./assets/card.png')]  xl:bg-[url('./assets/sam.png')]  bg-contain bg-no-repeat bg-center "></div>
-          <div className=" absolute left-[calc(-100vw)] w-[100%] bg-[url('./assets/card.png')] h-full xl:bg-[url('./assets/sam.png')] bg-contain bg-no-repeat bg-center"></div>
+          <div className="  absolute left-[0vw]  h-full w-[100%] bg-[url('/assets/back-cards.png')]  xl:bg-[url('/assets/back-cards.png')]  bg-contain bg-no-repeat bg-center "></div>
+          <div className=" absolute left-[calc(-100vw)] w-[100%] bg-[url('/assets/back-cards.png')] h-full xl:bg-[url('./assets/back-cards.png')] bg-contain bg-no-repeat bg-center"></div>
         </div>
 
         <div ref={tofro} className="absolute top-[2vh]  w-[100%] h-[64vh] ">
-          <div className="pendulum card-masking w-[60%] h-full   bg-[url('./assets/id.png')] bg-contain bg-no-repeat bg-center absolute pl-20 pt-15 xl:pl-15 xl:pt-10 top-[4vh] transform xl:translate-x-[105%]  ">
+          <div className="pendulum card-masking w-[60%] h-full z-9  bg-[url('./assets/id.png')] bg-contain bg-no-repeat bg-center absolute pl-20 pt-15 xl:pl-15 xl:pt-10 top-[4vh] transform xl:translate-x-[105%]  ">
             <img
               src="/assets/short-strip.png"
               alt=""
