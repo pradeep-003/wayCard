@@ -5,7 +5,6 @@ import { useGSAP } from "@gsap/react";
 import Base from "./Base";
 
 const Card2 = () => {
-  const tl = gsap.timeline();
   const keyDrop = useRef();
 
   useGSAP(
@@ -118,34 +117,41 @@ const Card2 = () => {
   );
 
   useGSAP(() => {
+    const tl = gsap.timeline({ repeat: -1 });
+
+    // 🎞 Step 1: strip moves
     tl.to(".strip", {
       x: 720,
       y: -300,
       duration: 0.8,
       ease: "linear",
     })
-      // ✨ stars blink (fade to 0.7 then back to 1)
+
+      // 🎇 Step 2: stars appear *after* strip finishes
       .to(".stars", {
         opacity: 1,
-        duration: 0.6,
+        duration: 0.1,
         stagger: 0.2,
       })
+
+      // 🌟 Step 3: hold stars visible for a bit
       .to(".stars", {
         opacity: 1,
-        duration: 2,
+        duration: 0.1,
       })
-      // 🌌 finally vanish stars completely
+
+      // 💫 Step 4: stars vanish
       .to(".stars", {
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.2,
+        duration: 0.2,
+        stagger: 0.6,
       })
-      .to(".stars", {
-        delay: 2,
-      })
-      // reset strips
-      .set(".strip", { x: 0, y: 0 })
-      .repeat(-1);
+
+      // ⏳ Step 5: small delay before reset
+      .to({}, { duration: 1 })
+
+      // 🔄 Step 6: reset strip
+      .set(".strip", { x: 0, y: 0 });
   });
 
   return (
@@ -155,14 +161,14 @@ const Card2 = () => {
         className=" h-[100vh]  relative  overflow-hidden w-full"
       >
         <div className=" key1 falling absolute rotate-80   left-[4%] top-[10%] transform  h-full w-[15%] xl:w-[12%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
-        <div className=" overflow-hidden key  absolute relative left-1/2  top-[-10%] transform -translate-x-1/2 h-full w-[35%] lg:w-[24%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center ">
+        <div className="overflow-hidden  key  absolute relative left-1/2  top-[-10%] transform -translate-x-1/2 h-full w-[35%] lg:w-[24%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center ">
           <img
             src="/assets/short-strip.png"
             alt=""
-            className="strip absolute bottom-12 -left-60  "
+            className="strip  absolute bottom-12 -left-60  "
           />
           <img
-            scr="/assets/large-strip.png"
+            src="/assets/large-strip.png" // ✅ correct
             alt=""
             className="strip absolute bottom-2 -left-70 "
           />
@@ -171,22 +177,22 @@ const Card2 = () => {
           <img
             src="/assets/star.png"
             alt=""
-            className="stars  absolute top-[47%] left-[49%] scale-75 opacity-0"
+            className="stars  absolute top-[49%] left-[49%] scale-75 opacity-0"
           />
           <img
             src="/assets/star.png"
             alt=""
-            className="stars  pendulum absolute top-[41%] left-[20%] opacity-0"
+            className="stars  pendulum absolute top-[39%] left-[20%] opacity-0"
           />
           <img
             src="/assets/star.png"
             alt=""
-            className="stars  pendulum absolute top-[60%] left-[14%] opacity-0"
+            className="stars  pendulum absolute top-[62%] left-[14%] opacity-0"
           />
           <img
             src="/assets/star.png"
             alt=""
-            className="stars  pendulum absolute top-[35%] left-[84%] scale-50 opacity-0"
+            className="stars  pendulum absolute top-[34%] left-[84%] scale-50 opacity-0"
           />
         </div>
 

@@ -7,8 +7,6 @@ const Card = () => {
   const cardsLR = useRef();
   const tofro = useRef();
 
-  const tl = gsap.timeline();
-
   useGSAP(
     () => {
       gsap.to(".scroll-bg", {
@@ -39,34 +37,41 @@ const Card = () => {
   );
 
   useGSAP(() => {
+    const tl = gsap.timeline({ repeat: -1 });
+
+    // 🎞 Step 1: strip moves
     tl.to(".strip", {
-      x: 980,
+      x: 720,
       y: -300,
-      duration: 0.6,
+      duration: 1,
       ease: "linear",
     })
-      // ✨ stars blink (fade to 0.7 then back to 1)
+
+      // 🎇 Step 2: stars appear *after* strip finishes
       .to(".stars", {
         opacity: 1,
-        duration: 0.5,
+        duration: 0.1,
         stagger: 0.2,
       })
+
+      // 🌟 Step 3: hold stars visible for a bit
       .to(".stars", {
         opacity: 1,
-        duration: 2,
+        duration: 0.1,
       })
-      // 🌌 finally vanish stars completely
+
+      // 💫 Step 4: stars vanish
       .to(".stars", {
         opacity: 0,
         duration: 0.6,
-        stagger: 0.2,
+        stagger: 0.1,
       })
-      .to(".stars", {
-        delay: 2,
-      })
-      // reset strips
-      .set(".strip", { x: 0, y: 0 })
-      .repeat(-1);
+
+      // ⏳ Step 5: small delay before reset
+      .to({}, { duration: 1 })
+
+      // 🔄 Step 6: reset strip
+      .set(".strip", { x: 0, y: 0 });
   });
 
   return (
@@ -117,8 +122,8 @@ const Card = () => {
               alt="star"
               className="absolute stars opacity-0 pendulum"
               style={{
-                bottom: "8%",
-                left: "50%",
+                bottom: "2%",
+                left: "70%",
                 width: "30px",
                 height: "30px",
                 transform: "translateX(-50%)",
@@ -132,7 +137,7 @@ const Card = () => {
               className="absolute stars opacity-0 pendulum"
               style={{
                 top: "30%",
-                left: "48%",
+                left: "78%",
                 width: "25px",
                 height: "25px",
                 transform: "translateY(-50%)",
@@ -157,7 +162,7 @@ const Card = () => {
         <Base
           title={"Permission Control"}
           content={
-            "Fusce vehicula rutrum lectus, ut posuere libero sodales at. Praesent erat quam, "
+            "Fusce vehicula rutrum lectus, ut posuere libero sodales at. Praesent erat quam,"
           }
         />
       </div>
