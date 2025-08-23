@@ -4,9 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Base from "./Base";
 
-import short from "../assets/short-strip.png";
-import long from "../assets/large-strip.png";
-import star from "../assets/star.png";
 const Card2 = () => {
   const tl = gsap.timeline();
   const keyDrop = useRef();
@@ -124,7 +121,7 @@ const Card2 = () => {
     tl.to(".strip", {
       x: 720,
       y: -300,
-      duration: 0.4,
+      duration: 0.8,
       ease: "linear",
     })
       // ✨ stars blink (fade to 0.7 then back to 1)
@@ -160,34 +157,34 @@ const Card2 = () => {
         <div className=" key1 falling absolute rotate-80   left-[4%] top-[10%] transform  h-full w-[15%] xl:w-[12%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center "></div>
         <div className=" overflow-hidden key  absolute relative left-1/2  top-[-10%] transform -translate-x-1/2 h-full w-[35%] lg:w-[24%] bg-[url('./assets/key.png')]  bg-contain bg-no-repeat bg-center ">
           <img
-            src={short}
+            src="/assets/short-strip.png"
             alt=""
             className="strip absolute bottom-12 -left-60  "
           />
           <img
-            src={long}
+            scr="/assets/large-strip.png"
             alt=""
             className="strip absolute bottom-2 -left-70 "
           />
         </div>
         <div className=" absolute relative left-1/2  top-[-110%] transform -translate-x-1/2 h-full w-[35%] lg:w-[24%]">
           <img
-            src={star}
+            src="/assets/star.png"
             alt=""
             className="stars  absolute top-[47%] left-[49%] scale-75 opacity-0"
           />
           <img
-            src={star}
+            src="/assets/star.png"
             alt=""
             className="stars  pendulum absolute top-[41%] left-[20%] opacity-0"
           />
           <img
-            src={star}
+            src="/assets/star.png"
             alt=""
             className="stars  pendulum absolute top-[60%] left-[14%] opacity-0"
           />
           <img
-            src={star}
+            src="/assets/star.png"
             alt=""
             className="stars  pendulum absolute top-[35%] left-[84%] scale-50 opacity-0"
           />

@@ -3,10 +3,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Base from "./Base";
 
-import short from "../assets/short-strip.png";
-import long from "../assets/large-strip.png";
-import star from "../assets/star.png";
-
 const Card = () => {
   const cardsLR = useRef();
   const tofro = useRef();
@@ -87,12 +83,12 @@ const Card = () => {
         <div ref={tofro} className="absolute top-[2vh]  w-[100%] h-[64vh] ">
           <div className="pendulum card-masking w-[60%] h-full   bg-[url('./assets/id.png')] bg-contain bg-no-repeat bg-center absolute pl-20 pt-15 xl:pl-15 xl:pt-10 top-[4vh] transform xl:translate-x-[105%]  ">
             <img
-              src={short}
+              src="/assets/short-strip.png"
               alt=""
               className="strip absolute bottom-[-16vh] left-[-10vw] "
             />
             <img
-              src={long}
+              src="/assets/large-strip.png"
               alt=""
               className="strip absolute bottom-[-29vh] left-[-12vw] scale-125"
             />
@@ -103,7 +99,7 @@ const Card = () => {
           >
             {/* Top star */}
             <img
-              src={star}
+              src="/assets/star.png"
               alt="star"
               className="absolute stars  opacity-0 pendulum"
               style={{
@@ -117,7 +113,7 @@ const Card = () => {
 
             {/* Bottom star */}
             <img
-              src={star}
+              src="/assets/star.png"
               alt="star"
               className="absolute stars opacity-0 pendulum"
               style={{
@@ -131,7 +127,7 @@ const Card = () => {
 
             {/* Left star */}
             <img
-              src={star}
+              src="/assets/star.png"
               alt="star"
               className="absolute stars opacity-0 pendulum"
               style={{
@@ -145,7 +141,7 @@ const Card = () => {
 
             {/* Right star */}
             <img
-              src={star}
+              src="/assets/star.png"
               alt="star"
               className="absolute stars opacity-0 pendulum"
               style={{

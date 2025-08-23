@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Components/Card";
 import "./index.css"; // Ensure your styles are imported
-import Card2 from "./Components/Card2.jsx";
+import Card2 from "./Components/Card2";
 
 const App = () => {
   return (
