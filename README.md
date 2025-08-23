@@ -57,12 +57,14 @@ wayCard is a modern React application built with Vite, GSAP, and Tailwind CSS. I
 ### Installation
 
 1. **Clone the repository**
+
    ```sh
    git clone https://github.com/your-username/wayCard.git
    cd wayCard
    ```
 
 2. **Install dependencies**
+
    ```sh
    npm install
    # or
@@ -70,6 +72,7 @@ wayCard is a modern React application built with Vite, GSAP, and Tailwind CSS. I
    ```
 
 3. **Run the development server**
+
    ```sh
    npm run dev
    # or
@@ -145,3 +148,5 @@ This project is licensed under the MIT License.
 ---
 
 ## Author
+
+Made by [Pradeep](https://github.com/pradeeep-003)
